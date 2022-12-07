@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sneakers resell</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<header>
+    <div class="title">
+        <h1>Whebook Manager</h1>
+    </div>
+    <div class="home">
+        <button><a href="/">Home</a></button>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <form method="post">
+            <label for="name">Nom de la paire</label>
+            <br>
+            <br>
+            <input type="text" name="name" placeholder="Dunk low black" value="{{ request.form['name'] }}"></input>
+            <br>
+            <br>
+            <label for="zlink">Lien zalando de la paire</label>
+            <br>
+            <br>
+            <input type="text" name="zlink" placeholder="https://..." value="{{ request.form['zlink'] }}"></input>
+            <br>
+            <br>
+            <label for="ilink">Lien image de la paire</label>
+            <br>
+            <br>
+            <input type="text" name="ilink" placeholder="https://..." value="{{ request.form['ilink'] }}"></input>
+            <br>
+            <br>
+            <label for="price">Prix retail</label>
+            <br>
+            <br>
+            <input type="text" name="price" placeholder="120" value="{{ request.form['price'] }}"></input>
+            <br>
+            <br>
+            <label for="pas">Prix pas</label>
+            <br>
+            <br>
+            <input type="text" name="pas" placeholder="10" value="{{ request.form['pas'] }}"></input>
+            <br>
+            <br>
+            <label for="name">Heures</label>
+            <br>
+            <br>
+            <input type="text" name="hours" placeholder="8h50 Z+, 15h10 G" value="{{ request.form['hours'] }}"></input>
+            <br>
+            <br>
+            <label for="date">MDP</label>
+            <br>
+            <br>
+            <input type="password" name="mdp" placeholder="mdp" value="{{ request.form['mdp'] }}"></input>
+            <br>
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

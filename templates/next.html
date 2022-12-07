@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Next day</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<header>
+    <div class="title">
+        <h1>Whebook Manager</h1>
+    </div>
+    <div class="home">
+        <button><a href="/">Home</a></button>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <form method="post">
+            <label for="day">Jour</label>
+            <br>
+            <br>
+            <input type="text" name="day" placeholder="Lundi" value="{{ request.form['day'] }}"></input>
+            <br>
+            <br>
+            <label for="date">Date du jour</label>
+            <br>
+            <br>
+            <input type="text" name="date" placeholder="8/12" value="{{ request.form['date'] }}"></input>
+            <br>
+            <br>
+            <label for="date">MDP</label>
+            <br>
+            <br>
+            <input type="password" name="mdp" placeholder="mdp" value="{{ request.form['mdp'] }}"></input>
+            <br>
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
